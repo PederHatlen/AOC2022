@@ -16,26 +16,9 @@ def task2(data):
         sum += ((ord(i[1])-88)*3) + res[((ord(i[0])-65)+(ord(i[1])-89))%3] # Charcodes
     return sum
 
-    # X = Loose
-    # Y = Draw
-    # Z = Win
-
-    # 1 - 3 = -2, venstre vinner
-    # 1 - 2 = -1, høyre vinner
-    # 1 - 1 = 0, draw
-    # 2 - 3 = -1, høyre vinner
-    # 2 - 2 = 0, draw
-    # 2 - 1 = 1, venstre vinner
-    # 3 - 3 = 0, draw
-    # 3 - 2 = 1, venstre vinner
-    # 3 - 1 = 2, høyre vinner
-
-    # 1 + 2 = 3
-    # 2 -1 = 1
-
-    # Høyre = -1, -1, 2
-    # Venstre = -2, 1, 1
+    # Left W = -2, 1, 1
     # Draw = 0, 0, 0
+    # Right W = -1, -1, 2
 
 if __name__ == "__main__":
     with open("Day2.txt", "r") as fi:
