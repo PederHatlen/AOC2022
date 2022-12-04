@@ -11,7 +11,7 @@ def task2(data):
     return sum(sorted(cal)[-3:])
 
 if __name__ == "__main__":
-    with open("Day1.txt", "r") as fi:
+    with open("input/Day1.txt", "r") as fi:
         data = fi.read()
         print(task1(data))
         print(task2(data))

@@ -21,7 +21,7 @@ def task2(data):
     # Right W = -1, -1, 2
 
 if __name__ == "__main__":
-    with open("Day2.txt", "r") as fi:
+    with open("input/Day2.txt", "r") as fi:
         data = fi.read()
         print(task1(data))
         print(task2(data))

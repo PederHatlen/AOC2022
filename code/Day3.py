@@ -17,7 +17,7 @@ def task2(data):
     return sum
 
 if __name__ == "__main__":
-    with open("Day3.txt", "r") as fi:
+    with open("input/Day3.txt", "r") as fi:
         data = fi.read()
         print(task1(data))
         print(task2(data))
