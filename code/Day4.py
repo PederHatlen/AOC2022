@@ -9,7 +9,6 @@ def task1(data):
     for line in l:
         n = list(map(int, re.split(',|-',line)))
         if (n[0]<=n[2] and n[1]>=n[3]) or (n[0]>=n[2] and n[1]<=n[3]):
-            print(n)
             sum+=1
     return sum
 
@@ -19,7 +18,6 @@ def task2(data):
     for line in l:
         n = list(map(int, re.split(',|-',line)))
         if (n[0]<=n[2] and n[1]>=n[2]) or (n[0]<=n[3] and n[1]>=n[3]) or (n[2]<=n[0] and n[3]>=n[0]) or (n[2]<=n[1] and n[3]>=n[1]):
-            print(n)
             sum+=1
     return sum
 
