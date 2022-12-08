@@ -4,7 +4,7 @@ def task1(data):
     visible = 0
     for x in range(1, len(matrix)-1):
         for y in range(1, len(matrix[0])-1):
-            # Checking if the maximum value in the array from subject to the edge is higher then subject
+            # Checking if the maximum value in the array from subject to the edge is higher than subject
             # if any direction is open (any statement is true), the tree is visible.
             if matrix[x][y] > max(matrix[x][:y]):
                 visible += 1
@@ -29,7 +29,7 @@ def task2(data):
     results = []
     for i in range(1, len(matrix)-1):
         for j in range(1, len(matrix[0])-1):
-            left = right = top = bottom = []
+            left, right, top, bottom = [], [], [], []
             
             # For every element in an array with subject as startpoint
                 # Add to element array (Mostly for debuging, but it's practical)

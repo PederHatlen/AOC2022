@@ -1,13 +1,18 @@
 values = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+# The rucksacks needs to be split in two.
+# Then similarities need to be found
 def task1(data):
     r = data.split("\n")
     sum = 0
     for i in r:
+        # Set types are used to find similarities, by using the & operator
+        # also: https://stackoverflow.com/a/752330
         c = list(set(i[:len(i)//2])&set(i[len(i)//2:]))[0]
         sum += values.index(c)+1
     return sum
 
+# Same as task 1, but the similarity is between three rucksacks
 def task2(data):
     r = data.split("\n")
     sum = 0

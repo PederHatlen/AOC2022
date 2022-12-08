@@ -1,3 +1,6 @@
+# Is used in both functions, so made a function
+# Makes a matrix from the input crates by running in chunks of 4
+# And only gathering disired data
 def makeCrateMatrix(data):
     crateInput = []
     crateStack = []
@@ -14,14 +17,14 @@ def makeCrateMatrix(data):
         crateStack.append(list(reversed(temp)))
     return crateStack
 
-# They are exactly the same, but without reverse in t2
-
 def task1(data):
     part = data.split("\n\n")
     part[0] = part[0].split("\n")
     part[1] = part[1].split("\n")
     crateStack = makeCrateMatrix(part[0])
 
+    # Looping through instructions and moving them
+    # Taking whole amount at once, and reversing the array
     for l in part[1]:
         split = l.split(" ")
 
@@ -33,6 +36,7 @@ def task1(data):
         del crateStack[fStack][-amount:]
     return "".join(list(map(lambda x: x[-1], crateStack)))
 
+# This is exactly the same as task 1, except the reversing
 def task2(data):
     part = data.split("\n\n")
     crates = part[0].split("\n")

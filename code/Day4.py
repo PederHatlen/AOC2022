@@ -1,17 +1,21 @@
 import re
 
-### NOTICE
-### This is a horrible terrible, no-good solution. Please do not replicate ###
+### NOTICE This is a horrible, terrible, no-good solution. Please do not replicate ###
 
+# Determining if collision by checking if edges are inside another
 def task1(data):
     l = data.split("\n")
     sum = 0
+    # Could have been done cleaner, but it was the fastest way i saw
     for line in l:
         n = list(map(int, re.split(',|-',line)))
         if (n[0]<=n[2] and n[1]>=n[3]) or (n[0]>=n[2] and n[1]<=n[3]):
             sum+=1
     return sum
 
+# This is were the old method shows it's true colors
+# It is done the same way as the first one, but it also needs overlappings
+# The solution is too check for all possible overlappings
 def task2(data):
     l = data.split("\n")
     sum = 0
